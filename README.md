@@ -13,6 +13,8 @@ pressure is air pressure, unit is hundred pascal
 dragco is drag coefficient  
 g is gravity  
   
+output result is position in x-axis, position in y-axis, speed in x-axis, speed in y-axis.  
+  
 这是一个用于Airsoft的弹道计算器  
 为了计算出你的Airsoft弹道，你需要将参数替换成你的数值。  
 calc_leap 是计算的间隔，单位是毫秒  
@@ -24,4 +26,6 @@ speed 是弹丸的速度，单位是米/秒
 temperature 是空气的温度，单位是摄氏度  
 pressure 是空气的压力，单位是百帕  
 dragco 是阻力系数  
-g 是重力  
+g 是重力 
+  
+输出结果是x轴上的位置，y轴上的位置，x轴上的速度，y轴上的速度。  
