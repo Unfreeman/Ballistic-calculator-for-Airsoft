@@ -26,7 +26,7 @@ end_alt 是计算停止时的高度，单位是米
 speed 是弹丸的速度，单位是米/秒  
 temperature 是空气的温度，单位是摄氏度  
 pressure 是空气的压力，单位是百帕  
-angle 是角度，单位是度
+angle 是角度，单位是度  
 dragco 是阻力系数  
 g 是重力 
   
