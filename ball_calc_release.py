@@ -1,4 +1,5 @@
 import numpy as np
+from matplotlib import pyplot as plt
 
 calc_leap = 1
 # ms
@@ -24,8 +25,8 @@ airde = pressure * 100 / (287.05 * (temperature + 273.15))
 sect = diameter / 2 / 1000 * diameter / 2 / 1000 * np.pi
 calc_leap = calc_leap / 1000
 weight = weight / 1000
-x_speed = np.cos(angle*np.pi/180)*speed
-y_speed = np.sin(angle*np.pi/180)*speed
+x_speed = np.cos(angle * np.pi / 180) * speed
+y_speed = np.sin(angle * np.pi / 180) * speed
 track = np.array([[0], [start_alt], [x_speed], [y_speed]])
 
 
@@ -45,7 +46,7 @@ calc_count = 0
 while track[1, calc_count] > end_alt:
     drag_speed = np.sqrt(np.square(track[2, calc_count]) + np.square(track[3, calc_count]))
     drag_force = drag(drag_speed)
-    angle_calc = np.arctan(track[3,calc_count]/track[2,calc_count])
+    angle_calc = np.arctan(track[3, calc_count] / track[2, calc_count])
     x_acc = np.cos(angle_calc) * drag_force / weight
     y_acc = np.sin(angle_calc) * drag_force / weight
     if track[2, calc_count] >= 0:
@@ -63,3 +64,12 @@ while track[1, calc_count] > end_alt:
     track = np.append(track, [[x_move_leap], [y_move_leap], [x_speed_leap], [y_speed_leap]], axis=1)
     print(track[0, calc_count], track[1, calc_count], track[2, calc_count], track[3, calc_count])
     calc_count += 1
+
+x_label = track[0]
+y_label = track[1]
+plt.xlabel("x axis")
+plt.ylabel("y axis")
+plt.axis("equal")
+plt.grid()
+plt.plot(x_label, y_label)
+plt.show()
