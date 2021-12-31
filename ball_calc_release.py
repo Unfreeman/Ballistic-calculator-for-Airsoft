@@ -21,6 +21,8 @@ angle = 0
 dragco = 0.5
 g = 9.8
 
+plt.title("weight=%.2f,diameter=%.2f,speed=%.2f,angle=%.2f" % (weight, diameter, speed, angle))
+
 airde = pressure * 100 / (287.05 * (temperature + 273.15))
 sect = diameter / 2 / 1000 * diameter / 2 / 1000 * np.pi
 calc_leap = calc_leap / 1000
