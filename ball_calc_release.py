@@ -32,8 +32,8 @@ y_speed = np.sin(angle * np.pi / 180) * speed
 track = np.array([[0], [start_alt], [x_speed], [y_speed]])
 
 
-def drag(self):
-    drag_force = airde * self * self * sect * dragco / 2
+def drag(speed):
+    drag_force = airde * speed * speed * sect * dragco / 2
     return drag_force
 
 
