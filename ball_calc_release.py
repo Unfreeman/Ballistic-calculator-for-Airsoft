@@ -68,7 +68,7 @@ while track[1, calc_count] > end_alt:
     y_move_leap = np.add(track[1, calc_count], y_calc_leap[0])
     y_speed_leap = y_calc_leap[1]
     track = np.append(track, [[x_move_leap], [y_move_leap], [x_speed_leap], [y_speed_leap]], axis=1)
-    print(track[0, calc_count], track[1, calc_count], track[2, calc_count], track[3, calc_count])
+    print(x_move_leap, y_move_leap, x_speed_leap, y_speed_leap)
     calc_count = np.add(calc_count, 1)
 
 x_label = track[0]
